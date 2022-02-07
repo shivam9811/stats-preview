@@ -1,0 +1,126 @@
+:root{
+    --main-background: hsl(233, 47%, 7%);
+--card-background: hsl(244, 38%, 16%);
+--soft-violet: hsl(277, 64%, 61%);
+
+--white: hsl(0, 0%, 100%);
+--main-paragraph: hsla(0, 0%, 100%, 0.75);
+--stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--main-background);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+ul{
+    list-style: none;   
+}
+h1{
+    font-family:'Inter',sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:var(--white);
+    margin-bottom: 2rem;
+}
+.purple{
+    color:var(--soft-violet);
+}
+h2{
+    font-family: 'Lexend-Deca',sans-serif;
+    font-weight: 700;
+    color:var(--white);
+}
+
+p{
+    font-family: 'Inter',sans-serif;
+    font-weight: 400;
+    color:var(--main-paragraph);
+    margin: 2rem 0;
+}
+li{
+    text-transform: uppercase;
+    color:var(--stat-headings);
+    font-weight: 400;
+    margin-top: 2rem;
+    font-size:0.8rem;
+    line-height: 1.5;
+}
+img{
+    width: 400px;
+   height: 100%;
+   border-radius:0 0.5rem  0.5rem 0;
+}
+.container .main-image{
+    position:relative;
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    background-color: hsl(277, 48%, 50%);
+   border-radius:0 0.5rem  0.5rem 0;
+   opacity: 40%;
+}
+.container{
+    margin-top:10rem;
+    background-color: var(--card-background);
+    border-radius:0.5rem;
+    display: flex;
+}
+.main{
+    width:300px;
+    margin: 3rem 5rem 3rem 3rem;
+}
+.data{
+    display: flex;
+    justify-content: space-between;
+}
+.attribution { 
+    margin-top: 1rem;
+    font-size: 11px;
+    text-align: center;
+}
+  
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media (max-width:500px) {
+    *{
+        text-align: center;
+    }
+    .container{
+        display:flex;
+        flex-direction: column-reverse;
+        width: 20rem;
+    }
+    img{
+        height: 15rem;
+        width: 20rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .overlay{
+        border-radius: 0.5rem 0.5rem 0 0;
+        height: 15rem;
+        width: 100%;
+    }
+    .main{
+        margin-left:2.4rem;
+
+        width: 15rem;
+    }
+    .data{
+        display:flex;
+        flex-direction: column;
+    }
+}
